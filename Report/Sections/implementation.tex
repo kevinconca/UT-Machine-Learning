@@ -1,0 +1,30 @@
+For the implementation of the learning algorithms we consider two options, MATLAB or Python. Both programming languages have existing have methods that support machine learning. However, we decided to use Python along with the \textbf{scikit-learn} library. The choice was made based on the simple and efficient tools this library offers and the fact that Python is a lightweight programming language, therefore it can process all the data we have significantly faster than MATLAB.
+
+The process we followed can be summarized in the following steps:
+\begin{enumerate}
+	\item Create 'small' and 'big' training set.
+	\item Inner split into training and test sets.
+	\item Tune hyper-parameters using 'small' data.
+	\item Train classifier using 'big' training data.
+	\item Analyze performance results.
+	\item Test classifier with original test set.
+	\item Store probabilistic predictions for later use.
+	\item Repeat steps 3. to 7. with a new learning algorithm
+\end{enumerate}
+
+First we begin by taking a small sample of the training dataset, 7\% to be precise, making sure the percentage of samples per class is preserved. Having now a small subset and the original set, we proceed to split them into inner training and test set (80/20). The small subset will be used for tuning the hyper-parameters of each learning algorithm. This is made using grid search which consists of making an exhaustive search over specified parameter values to find the combination which yields the best result. The grid search was conducted along with a 3-fold cross validation for a more reliable result. After tuning the hyper-parameters we proceed to train the classifier making use of the 'big' inner training set and measure its performance with the corresponding test set.
+
+Until now, only the training set provided by OTTO was used. The next step consists on obtaining the probabilistic predictions making use of the test set originally provided. We store this predictions for a later analysis to improve the overall LogLoss performance.
+
+\subsection{Logistic Regression}
+\input{./Sections/LogRegression.tex}
+\subsection{K-nearest neighbor}
+\input{./Sections/KNNeighbor.tex}
+\subsection{Random Forests}
+\input{./Sections/RandomForests.tex}
+\subsection{Gradient Boosting}
+\input{./Sections/GradientBoosting.tex}
+\subsection{Combining predictions}
+\input{./Sections/combining.tex}
+\subsection{Computation time}
+\input{./Sections/computationTime.tex}

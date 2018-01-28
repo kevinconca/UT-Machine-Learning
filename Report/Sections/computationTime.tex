@@ -1,0 +1,20 @@
+Even though no precise measurements for computation time in Table \ref{table:times} a general overview is presented where '$+++$' should be interpreted as 'fast' and '$---$' as 'slow'.
+
+\begin{table}[h!]
+	\centering
+	\caption{Overview of training and predicting times}
+	\begin{tabular}{| l | c | c |}
+		\hline
+		\textbf{Classifier} & \textbf{Training time} & \textbf{Predicting time}\\
+		\hline
+		KNearestClassifier & $+++$ & $---$ \\ \hline
+		LogisticRegression & $++-$ & $++-$ \\ \hline
+		RandomForestClassifier & $++-$ & $+--$ \\ \hline
+		GradientBoostingClassifier & $+--$ & $++-$ \\ \hline
+	\end{tabular}
+	\label{table:times}
+\end{table}
+
+From the algorithms tested, the fastest to train is k-NN because it doesn't require training at all, and the slowest to train is gradient boosting. The fastest to predict is Logistic Regression followed by gradient boosting, and the slowest is k-NN because it has to make a search over all the dataset to find the k-nearest neighbors either by brute force or by some more efficient methods based on trees (ball tree or k-d tree).
+
+It is interesting how both ensembles methods are inversely efficient, Random Forests is relatively fast to train but slow to predict and Gradient Boosting is the opposite. This is because in Random Forests th trees used are independent from each other with random samples from the data which makes training faster, however this trees have long depth which leads to a slow prediction. Gradient Boosting trees are connected and after the other making training slow, but the fact that this are weak learners (low depth trees) makes prediction faster. 

@@ -1,0 +1,16 @@
+Having analyzed multiple algorithms and their performances we can give an answer to the initial research question.
+\begin{center}
+	\textbf{Which learning algorithm is most suited for the sorting of products into categories and with what settings will the performance be optimal?}
+\end{center}
+While it is true that a single algorithm will perform better than others, results obtained in this paper indicate that combining outputs of multiple different learning algorithms lead to an increase in probability prediction performance. Even when the score of a certain learning algorithm is not as good as others one shouldn't underestimate it's possible influence to achieve a better result when combining them.
+
+Winning competitors posted their approach, the two best scores implementations were based on stacking (stacked generalization) introducing the concept of meta learner. It can be seen as a more sophisticated version of cross-validation, exploiting a strategy which combines the individual models instead of picking the best one out the cross-validation results. The key idea is to perform cross-validation for the training and testing of base classifiers, then the predictions are used as the inputs, and the correct responses as the outputs to train a meta (higher level) classifier.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.7\textwidth]{stackingschema}
+	\caption{Stacking's schema of 2nd place winner}
+	\label{fig:stacking}
+\end{figure}
+Nonetheless, in a stacking schema computational time will be limited by the slowest algorithm in terms of training and prediction because the output from all classifiers has to be used for averaging, voting or as input for a meta learner.
+

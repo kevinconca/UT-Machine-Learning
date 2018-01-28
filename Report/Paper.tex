@@ -1,0 +1,31 @@
+\documentclass [paper=a4, fontsize=11pt]{article}%[paper=a4, fontsize=11pt, twocolumn]{article}
+\usepackage{amsmath,amsfonts,amsthm} % Math packages
+\usepackage{graphicx}
+\graphicspath{ {Images/} }
+\title{Combining different model predictions to increase product classification performance}
+
+\author{Kim Beunder (s0209074) \& Kevin Serrano (s1595040)}
+
+\begin{document}
+
+\maketitle
+\begin{abstract}
+	In e-commerce companies, the quality of product analysis depends heavily on the ability to accurately cluster similar products. Given a dataset from the OTTO company, multiple different learning algorithms are used to build of different classifiers. By combining the outputs (predictions) obtained it is possible to outstand the performance that would be otherwise achieved making use of only one classifier.
+\end{abstract}
+\section{Introduction}
+\input{./Sections/Introduction.tex}
+\section{Otto Group Product Classification Challenge}
+\input{./Sections/OttoChallenge.tex}
+\section{Related Work}
+\input{./Sections/RelatedWork.tex}
+\section{Research and Analysis}
+\input{./Sections/ResearchAndAnalysis.tex}
+\section{Implementation}
+\input{./Sections/implementation.tex}
+\section{Discussion}
+\input{./Sections/discussion.tex}
+\section{Conclusions}
+Combining results relying on probabilistic estimates from different learning algorithms is a way of improving score in classification problems. Diversity of learning methods is important to consider as it helps the overall final result. A trade between accuracy and computing time has to be made, an increase in performance would most probably imply an increase in computational time.
+
+\input{./Sections/references.tex}
+\end{document}

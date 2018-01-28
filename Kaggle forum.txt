@@ -1,0 +1,30 @@
+Here are some links to useful information in Kaggle
+https://www.kaggle.com/c/otto-group-product-classification-challenge/forums
+
+The solution approach of the winners is also there, they use the 'stacking' method which I don't fully understand yet.
+- Here is the first place (too complicated): 
+	https://www.kaggle.com/c/otto-group-product-classification-challenge/forums/t/14335/1st-place-winner-solution-gilberto-titericz-stanislav-semenov
+- The second place (possible that we do something similar):
+	http://blog.kaggle.com/2015/06/09/otto-product-classification-winners-interview-2nd-place-alexander-guschin/
+
+I also uploaded the ipython notebooks I did so far, they are not fully commented but I hope you can use them as reference for implementing the Random Forest Algorithm
+
+In this link you can find some useful images to include in the report:
+https://www.kaggle.com/c/otto-group-product-classification-challenge/forums/t/13585/share-your-scripts-visualizations
+
+For feature importance you can use the 'feature_importances_' attribute of the Random Forest Classifier
+If you want to plot them in a bar graph you can use this commands:
+y = RandomForestClassifier.feature_importances_
+x = range(len(y))
+plt.bar(x, y, color="blue")
+
+For the maximum values per column or rows you can use this:
+max_per_col = train.max(axis=0)
+max_per_row = train.max(axis=1)
+
+to save them to csv:
+max_per_col.to_csv('max_per_col.csv')
+
+References:
+http://machine-learning.martinsewell.com/ensembles/stacking/
+

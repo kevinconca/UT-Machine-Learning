@@ -1,0 +1,10 @@
+\subsubsection{Data}
+For this competition, a dataset with 93 features for more than 200,000 products is provided. The objective is to build a predictive model which is able to distinguish between our main product categories. The winning models will be open sourced.
+
+There are nine categories for all products. Each target category represents one of our most important product categories (like fashion, electronics, etc.). The products for the training and testing sets are selected randomly.
+\subsubsection{Evaluation}
+Submissions are evaluated using the multi-class logarithmic loss. Each product has been labeled with one true category. For each product, you must submit a set of predicted probabilities (one for every category). The formula is then,
+
+$$ logloss=-\frac{1}{N}\sum_{i=1}^{N} \sum_{j=1}^{M}y_{ij}\log(p_{ij}) $$
+
+where $N$ is the number of products in the test set, $M$ is the number of class labels, $log$ is the natural logarithm, $y_{ij}$ is $1$ if observation $i$ is in class $j$ and $0$ otherwise, and $p_{ij}$ is the predicted probability that observation $i$ belongs to class $j$.
