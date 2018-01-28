@@ -1,5 +1,5 @@
 # UT-Machine-Learning
-Project for Machine Learning course at University of Twente (2015)
+[Kaggle] Project for Machine Learning course at University of Twente (2015)
 
 **In collaboration with Kim Beunder**
 
