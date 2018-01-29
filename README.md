@@ -13,6 +13,7 @@ categories. The winning models will be open sourced.
 
 ## Software
 * Anaconda
+  * Pyhton
   * scikit-learn
   * numpy
   * pandas
