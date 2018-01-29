@@ -23,4 +23,4 @@ categories. The winning models will be open sourced.
 
 Unfortunately I wasn't able to recover the full jupyter notebooks containing all the results presented in the [report](Report/Paper.pdf). However, I include base code which can be extended at will.
 
-The goal was to build and ensemble method containing a Logistic Regression, k-Nearest Neighbors, Random Forests and Gradient Boosting to reduce a _multi-class logarithmic loss_.
+The goal was to build and ensemble method containing Logistic Regression, k-Nearest Neighbors, Random Forests and Gradient Boosting classifiers to reduce a _multi-class logarithmic loss_.
